@@ -1,0 +1,18 @@
+<h1>Incidents#index</h1>
+<p>Find me in app/views/incidents/index.html.erb</p>
+<table>
+  <thead>
+    <td>ID</td>
+    <td>Title</td>
+    <td>Source</td>
+  </thead>
+  <tbody>
+  <% @incidents.each do |i| %>
+    <tr>
+      <td><%= i.id %></td>
+      <td><%= i.title %></td>
+      <td><%= i.source %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
