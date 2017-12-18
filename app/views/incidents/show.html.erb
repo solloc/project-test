@@ -1,5 +1,7 @@
 <h1>show detailed information</h1>
+<p><%= link_to "back to index", incidents_path %> | <%= link_to "edit", edit_incident_path(@incident) %></p>
 <p>detailed information about incident</p>
 <p>ID: <%= @incident.id %></p>
 <p>Title: <%= @incident.title %></p>
 <p>Priority: <%= @incident.priority %></p>
+<p>Source: <%= @incident.source %></p>

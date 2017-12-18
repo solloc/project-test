@@ -20,10 +20,20 @@ class IncidentsController < ApplicationController
     @incident = Incident.find(params[:id])
   end
 
+  def edit
+    @incident = Incident.find(params[:id])
+  end
+
+  def update
+    @incident = Incident.find(params[:id])
+    @incident.update(incident_params)
+    redirect_to(incident_path(@incident))
+  end
+
 
   private
   def incident_params
-    params.require(:incident).permit(:priority, :title)
+    params.require(:incident).permit(:priority, :title, :source)
   end
 
 

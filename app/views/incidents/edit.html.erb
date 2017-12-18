@@ -1,0 +1,8 @@
+<h1>Edit Incident</h1>
+<%= form_for @incident, url: {action: "update"} do |i| %>
+  <%= i.text_field :id, placeholder: "ID" %><br/>
+  <%= i.text_field :priority, placeholder: "Priority" %><br/>
+  <%= i.text_field :title, placeholder: "Title" %><br/>
+  <%= i.text_field :source, placeholder: "Source" %><br/>
+  <%= i.submit %>
+<% end %>
