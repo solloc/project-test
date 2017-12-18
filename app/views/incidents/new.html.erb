@@ -1,0 +1,7 @@
+<h1>Incidents#new</h1>
+<p>Find me in app/views/incidents/new.html.erb</p>
+<%= form_for @incident, url: {action: "create"} do |i| %>
+  <%= i.text_field :priority, placeholder: 'Priority' %>
+  <%= i.text_field :title, placeholder: 'Title' %>
+  <%= i.submit %>
+<% end %>
