@@ -1,0 +1,9 @@
+<h1>Users#new</h1>
+<p>Find me in app/views/users/new.html.erb, <%= link_to "back home", root_path %></p>
+<p>
+  <%= form_for @user, url: {action: "create"} do |u| %>
+    <%= u.text_field :email, placeholder: "E-Mail" %><br/>
+    <%= u.text_field :password, placeholder: "Password" %><br/>
+    <%= u.submit %>
+  <% end %>
+</p>

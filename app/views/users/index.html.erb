@@ -1,0 +1,22 @@
+<h1>User Index</h1>
+<p><%= link_to "home", root_path %></p>
+<table>
+  <thead>
+    <tr>
+      <td>ID</td>
+      <td>E-Mail</td>
+      <td>Password digest</td>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |u| %>
+      <tr>
+        <td><%= u.id %></td>
+        <td><%= u.email %></td>
+        <td><%= u.password_digest %></td>
+        <td><%= link_to "Profile", profile_path(u) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
