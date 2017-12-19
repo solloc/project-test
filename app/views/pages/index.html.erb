@@ -4,3 +4,10 @@
 <p><%= @message %></p>
 <p><%= link_to "incidents", incidents_path %></p>
 <p>User: <%= link_to "register", register_path %> | <%= link_to "index", users_path %></p>
+<p>Session:
+  <%= link_to "login", login_path unless current_user %> |
+  <% if current_user %>
+    <%= current_user.email %>
+    <%= link_to "logout", logout_path %>
+  <% end %>
+</p>

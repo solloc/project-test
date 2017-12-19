@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   post 'users' => 'users#create'
   get 'profile/:id' => 'users#show', as: 'profile'
 
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  get 'logout' => 'sessions#destroy'
+
   get 'incidents' => 'incidents#index'
   get 'incidents/new' => 'incidents#new'
   get 'incidents/:id' => 'incidents#show', as: 'incident'
